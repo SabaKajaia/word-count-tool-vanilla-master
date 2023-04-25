@@ -1,9 +1,7 @@
-const strInput = document.getElementById("str");
-const outputDiv = document.getElementById("output");
-const btn = document.getElementById("btn");
-
-btn.addEventListener("click", () => {
-  const str = strInput.value;
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", function() {
+  const str = document.querySelector("#str").value;
   const length = str.length;
-  outputDiv.textContent = `The word "${str}" has ${length} characters.`;
+  const output = document.querySelector("#output");
+  output.innerHTML = length;
 });
